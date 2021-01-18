@@ -103,9 +103,9 @@ function popup() {
   }
 }
 
-function getTokenFromCode(code: string, client_id: string, app_secret: string) {
+function getTokenFromCode(code: string, client_id: string, app_secret: string, app_server: string) {
   return ApiMethod("oauth2_token", {
-    params: { client_id: client_id, client_secret: app_secret, code: code },
+    params: { client_id: client_id, client_secret: app_secret, code: code, app_server: app_server },
   });
 }
 
